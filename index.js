@@ -15,7 +15,7 @@ server.get('/params', (req, res) => {
   return res.json({ message: `Hello ${nome}`});
 });
 
-const users = ['Diego', 'Cláudio', 'Victor'];
+const users = ['Diego', 'Patrick', 'Victor'];
 server.get('/users/:id', (req, res) => {
   const { id } = req.params;
   return res.json({ user: users[id]});
