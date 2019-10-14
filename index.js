@@ -15,9 +15,10 @@ server.get('/params', (req, res) => {
   return res.json({ message: `Hello ${nome}`});
 });
 
+const users = ['Diego', 'Cláudio', 'Victor'];
 server.get('/users/:id', (req, res) => {
   const { id } = req.params;
-  return res.json({ message: `ID do usuário: ${id}`});
+  return res.json({ user: users[id]});
 });
 
 server.listen(3000);
